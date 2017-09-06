@@ -63,7 +63,7 @@ define(['lib/key-mirror'], function(KeyMirror){
 
         Engine: {
             STOP_PREDICTING_LAPSE: 300,
-            HOST: "136.144.135.51:3842",
+            HOST: (window.document.location.host === 'www.bustabit.com' || window.DEV_OTT) ? 'https://g2.moneypot.com:443' : window.document.location.host.replace(/http://136.144.135.51$/, 136.144.135.51':3842'),
             CHAT_HOST: window.document.location.host,
             MAX_BET: 100000000 /** Max bet per game 1,000,000 Bits, this will be calculated dynamically in the future, based on the invested amount in the casino **/
         },
